@@ -43,13 +43,8 @@ public class MainController
     {
         Fizzbuzz doFizz = new Fizzbuzz();
         ArrayList<String> thisList = doFizz.fizzBuzzCopyCat(score.getNumberSelected());
-        System.out.println(thisList.size());
-        for(String item: thisList)
-        {
-            System.out.println(item);
-        }
-        model.addAttribute(thisList);
+        model.addAttribute("thisList",thisList);
         //repo.save(score);
-        return "showit";
+        return "showoutput";
     }
 }

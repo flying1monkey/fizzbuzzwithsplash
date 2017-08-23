@@ -25,9 +25,7 @@
 
         <div class="cover-container">
 
-            <div th:each="item:${itemList}">
-                <p th:text="${item}"></p>
-            </div>
+
 
             <!--<div class="masthead clearfix">-->
             <!--<div class="inner">-->
@@ -43,10 +41,11 @@
             <div class="inner cover">
 
                 <p class="lead"></p>
-
-                <div th:each="thing:${thisList}">
-                    Hello
-                </div>
+                <table border="1">
+                <tr th:each="item:${thisList}">
+                    <td th:text="${item}"></td>
+                </tr>
+                </table>
             </div>
 
             <div class="mastfoot">
