@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Fizzbuzz
 {
 
-    private ArrayList<String> fizzArray;
+    private ArrayList<String> fizzArray = new ArrayList<String>();
 
     public ArrayList fizzBuzzCopyCat(int goal)
     {
@@ -30,11 +30,10 @@ public class Fizzbuzz
             {
                 textToAdd +="Cat";
             }
-            else
+            if(textToAdd.isEmpty())
             {
                 textToAdd +=Integer.toString(counter);  //better practice
             }
-            System.out.println(textToAdd);
             fizzArray.add(textToAdd);
         }
         return fizzArray;

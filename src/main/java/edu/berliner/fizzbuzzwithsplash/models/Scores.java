@@ -16,7 +16,7 @@ public class Scores
     @GeneratedValue
     private long id;
 
-    @NotEmpty
+    //@NotEmpty
     private String user;
     @Range(min=10, max = 100)
     private int numberSelected;

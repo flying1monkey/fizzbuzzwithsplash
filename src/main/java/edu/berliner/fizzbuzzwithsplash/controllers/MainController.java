@@ -41,12 +41,15 @@ public class MainController
     @PostMapping("/main")
     public String showOutput(@ModelAttribute("score") Scores score, Model model)
     {
-        System.out.println("Num:" +score.getNumberSelected());
         Fizzbuzz doFizz = new Fizzbuzz();
         ArrayList<String> thisList = doFizz.fizzBuzzCopyCat(score.getNumberSelected());
-        //model.addAttribute(thisList);
+        System.out.println(thisList.size());
+        for(String item: thisList)
+        {
+            System.out.println(item);
+        }
+        model.addAttribute(thisList);
         //repo.save(score);
-        //return "showoutput";
-        return null;
+        return "showit";
     }
 }
